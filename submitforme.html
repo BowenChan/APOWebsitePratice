@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+  <link rel= "stylesheet" type = "text/css" href = "style.css">
+  <meta charset="utf-8">
+  <title>Untitled Document</title>
+  <script>
+  $(this).ready();
+	function minute()
+	{
+			for(var i = 0; i < 60; i++)
+			 { 
+			 	if(i < 10)
+				{
+					document.write('<option value="' + i + '">0' +i+ '</option>');
+				}
+				else
+			 		document.write('<option value="' + i + '">' + i + '</option>'); 
+			 }
+	}
+	function hour()
+	{
+		for(var i = 0; i < 13; i++)
+			 { 
+			 	if(i < 10)
+				{
+					document.write('<option value="' + i + '">0' +i+ '</option>');
+				}
+				else
+			 		document.write('<option value="' + i + '">' + i + '</option>'); 
+			 }
+	}
+	
+	function hello()
+	{
+		alert("hi");
+	}
+  
+  </script>
+  </head>
+
+  <body>
+<h1> In order to submit a service, please enter the follow data </h1>
+<form action = "service.php" method = "post">
+    <p> First name:
+    <input type = "text" name ="firstN"/>
+  </p>
+    <p> Last name:
+    <input type = "text" name = "lastN"/>
+  </p>
+    <p> Name of Event:
+    <input type = "text" name = "service"/>
+  </p>
+    <p> Date:
+    <input type = "text" name = "date"/>
+  </p>
+    <p> Time
+    <select name="sHour" style = "width: 50px" >
+        <script>
+  		hour();
+	</script>
+      </select>
+    :
+    <select name="sMin" style = "width: 50px">
+        <script>
+		minute();
+	</script>
+      </select>
+    to
+    <select name="eHour" style = "width: 50px" >
+        <script>
+  		hour();
+	</script>
+      </select>
+    :
+    <select name="eMin" style = "width: 50px">
+        <script>
+		minute();
+	</script>
+      </select>
+  </p>
+    <!--Check if I can use a dropbox of time and create an array -->
+    <p> Description of Event:</p>
+    <p>
+    <textarea name = "descript" cols = "50" rows ="5" maxlength = "500"> </textarea>
+  </p>
+    <input type = "submit"/>
+  </p>
+  </form>
+</body>
+</html>

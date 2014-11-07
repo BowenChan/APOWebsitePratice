@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+<link rel= "stylesheet" type = "text/css" href = "style.css">
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+  <script>
+  $(this).ready();
+	function minute()
+	{
+			for(var i = 0; i < 60; i++)
+			 { 
+			 	if(i < 10)
+				{
+					document.write('<option value="' + i + '">0' +i+ '</option>');
+				}
+				else
+			 		document.write('<option value="' + i + '">' + i + '</option>'); 
+			 }
+	}
+	function hour()
+	{
+		for(var i = 0; i < 13; i++)
+			 { 
+			 	if(i < 10)
+				{
+					document.write('<option value="' + i + '">0' +i+ '</option>');
+				}
+				else
+			 		document.write('<option value="' + i + '">' + i + '</option>'); 
+			 }
+	}
+	
+	function hello()
+	{
+		alert("hi");
+	}
+  
+  </script>
+	
+</head>
+
+<body>
+
+<h1> In order to submit a service, please enter the follow data </h1>
+
+<form action = "service.php" method = "post">
+<p> First name: <input type = "text" name ="firstN"/> </p>
+<p> Last name: <input type = "text" name = "lastN"/> </p>
+<p> Name of Service: <input type = "text" name = "service"/> </p>
+<p> Date: <input type = "text" name = "date"/> </p>
+<p> Time
+
+  <select name="sHour" style = "width: 50px" >
+  	<script>
+  		hour();
+	</script>
+  <!--
+    <option value="0">00</option>
+    <option value="1">01</option>
+    <option value="2">02</option>
+    <option value="3">03</option>
+    <option value="4">04</option>
+    <option value="5">05</option>
+    <option value="6">06</option>
+    <option value="7">07</option>
+    <option value="8">08</option>
+    <option value="9">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    -->
+  </select> 
+  :
+  <select name="sMin" style = "width: 50px">
+    <script>
+		minute();
+	</script>
+    <!--<option value="0">00</option>
+    <option value="1">01</option>
+    <option value="2">02</option>
+    <option value="3">03</option>
+    <option value="4">04</option>
+    <option value="5">05</option>
+    <option value="6">06</option>
+    <option value="7">07</option>
+    <option value="8">08</option>
+    <option value="9">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+    <option value="32">32</option>
+    <option value="33">33</option>
+    <option value="34">34</option>
+    <option value="35">35</option>
+    <option value="36">36</option>
+    <option value="37">37</option>
+    <option value="38">38</option>
+    <option value="39">39</option>
+    <option value="40">40</option>
+    <option value="41">41</option>
+    <option value="42">42</option>
+    <option value="43">43</option>
+    <option value="44">44</option>
+    <option value="45">45</option>
+    <option value="46">46</option>
+    <option value="47">47</option>
+    <option value="48">48</option>
+    <option value="49">49</option>
+    <option value="50">50</option>
+    <option value="51">51</option>
+    <option value="52">52</option>
+    <option value="53">53</option>
+    <option value="54">54</option>
+    <option value="55">55</option>
+    <option value="56">56</option>
+    <option value="57">57</option>
+    <option value="58">58</option>
+    <option value="59">59</option> -->
+  </select>
+  to
+  <select name="eHour" style = "width: 50px" >
+  	<script>
+  		hour();
+	</script>
+  <!--
+    <option value="0">00</option>
+    <option value="1">01</option>
+    <option value="2">02</option>
+    <option value="3">03</option>
+    <option value="4">04</option>
+    <option value="5">05</option>
+    <option value="6">06</option>
+    <option value="7">07</option>
+    <option value="8">08</option>
+    <option value="9">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    -->
+  </select> 
+  :
+  <select name="eMin" style = "width: 50px">
+	<script>
+		minute();
+	</script>
+    <!--<option value="0">00</option>
+    <option value="1">01</option>
+    <option value="2">02</option>
+    <option value="3">03</option>
+    <option value="4">04</option>
+    <option value="5">05</option>
+    <option value="6">06</option>
+    <option value="7">07</option>
+    <option value="8">08</option>
+    <option value="9">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+    <option value="32">32</option>
+    <option value="33">33</option>
+    <option value="34">34</option>
+    <option value="35">35</option>
+    <option value="36">36</option>
+    <option value="37">37</option>
+    <option value="38">38</option>
+    <option value="39">39</option>
+    <option value="40">40</option>
+    <option value="41">41</option>
+    <option value="42">42</option>
+    <option value="43">43</option>
+    <option value="44">44</option>
+    <option value="45">45</option>
+    <option value="46">46</option>
+    <option value="47">47</option>
+    <option value="48">48</option>
+    <option value="49">49</option>
+    <option value="50">50</option>
+    <option value="51">51</option>
+    <option value="52">52</option>
+    <option value="53">53</option>
+    <option value="54">54</option>
+    <option value="55">55</option>
+    <option value="56">56</option>
+    <option value="57">57</option>
+    <option value="58">58</option>
+    <option value="59">59</option> -->
+  </select>
+ </p> 
+<!--Check if I can use a dropbox of time and create an array -->
+<p> Description of Service:</p> 
+<p> <textarea name = "descript" cols = "50" rows ="5" maxlength = "500"> </textarea></p>
+<p> Do you need to contact the Coordinator <select name = "contact"><option value = "yes"> Yes </option> <option value = "no"> No </option></select></p>
+<p> If Yes, by when: </p>
+<p><input type = "text" name = "date"/></p>
+<h2> Contact Information </h2>
+<p> Coordinator's Name: <input type = "text" name = "cname"/> </p>
+<p> Phone Number: (<input type = "text" name = "areacode" style = "width: 25px" maxlength = 3/>)<input type = "text" name = "first_three" style = "width: 25px" maxlength = 3/> - <input type = "text" name = "last_four" style = "width: 33px"/></p>
+<p> Email: <input type = "text" name = "coordemail"/> </p>
+<p><input type = "submit"/> </p>
+</form>
+</body>
+</html>
